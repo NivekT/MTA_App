@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p The cumulative uptime percentage for each route (in minutes) is:
+  ul
+    each upTimeP, route in upTimePercentage
+      li= route + ': ' + upTimeP
+  p The cumulative downtime for each route (in minutes) is:
+  ul
+    each cumDownTime, route in downtime
+      li= route + ': ' + cumDownTime + ' minutes'
